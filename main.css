@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #3A4663;
+}
+
+.header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.title{
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 36px;
+    /* identical to box height */
+
+    text-align: center;
+    letter-spacing: -0.533333px;
+
+    color: #FFFFFF;
+    text-align: left;
+}
+
+.calculator-layout{
+    display: grid;
+    grid-template-columns: 540px;
+    grid-template-rows: 50px 128px 480px;
+    grid-gap: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.solution {
+    background-color: #181F33;
+    border-radius: 10px;
+}
+
+.solution h1{
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 54px;
+    /* identical to box height */
+    text-align: right;
+    letter-spacing: -0.8px;
+    color: #FFFFFF;
+    margin-right: 30px;
+}
+
+
+.buttons{
+    background-color: #242D44;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: repeat(4,64px) 64px;  
+    justify-content: space-evenly;
+    align-content: space-evenly;
+}
+
+.buttons button{
+    background: #EAE3DC;
+    box-shadow: inset 0px -4px 0px #B3A497;
+    border-radius: 10px;
+   
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 36px;  
+    letter-spacing: -0.533333px;
+    color: #434A59;
+  
+}
+.buttons .del{
+    background: #647198;
+    box-shadow: inset 0px -4px 0px #414E73;
+    border-radius: 10px;
+    
+    color: #FFFFFF;
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: -0.333333px;
+  
+}
+
+
+.buttons .reset{
+    background: #647198;
+    box-shadow: inset 0px -4px 0px #414E73;
+    border-radius: 10px;
+
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: -0.333333px;
+    width: 227px;
+    color: #FFFFFF;
+}
+
+
+.buttons .equals{
+    background: #D03F2F;
+    box-shadow: inset 0px -4px 0px #93261A;
+    border-radius: 10px;
+    
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: -0.333333px;
+    width: 227px;
+    margin-left: 130px;
+    color: #FFFFFF;
+}
+
+.slidecontainer {
+    width: 71px; 
+    height: 20px;
+    justify-self: end;
+    align-self: center;
+    padding-right: 10px;
+  }
+  
+  /* The slider itself */
+  .slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: #242D44; /* Grey background */
+    outline: none; /* Remove outline */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    border-radius: 13px;
+    padding-left: 5px;
+    padding-right:5px;
+  }
+  
+
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 16px; /* Set a specific slider handle width */
+    height: 16px; /* Slider handle height */
+    background: #D03F2F; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 50%;
+
+   
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 16px; /* Set a specific slider handle width */
+    height: 16px; /* Slider handle height */
+    background: #04AA6D; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 50%;
+  }
