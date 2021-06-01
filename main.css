@@ -1,9 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
 
+:root{
+    --background:#3A4663;
+    --contrasttext:#FFFFFF;
+    --solutionbackground:#181F33;
+    --buttonsbackground: #242D44;
+    --button:#EAE3DC;
+    --specialbutton:#647198;
+    --equalsbutton:#D03F2F;
+    --buttontext:#434A59;
+    --titletext:#FFFFFF;
+    --boxshadow:#B3A497;
+    --equaltext:#FFFFFF;
+    --resetshadow:#414E73;
+    --equalsshadow:#93261A;
+}
+
+[data-theme="second"]{
+    --background:#E6E6E6;
+    --contrasttext:#FFFFFF;
+    --solutionbackground:#EEEEEE;
+    --buttonsbackground:  #D2CDCD;
+    --button: #E5E4E1;
+    --specialbutton:#378187;
+    --equalsbutton:#D03F2F;
+    --buttontext:#36362C;
+    --titletext:#36362C;
+    --boxshadow:#A79E91;
+    --equaltext:#FFFFFF;
+    --resetshadow:#1B6066;
+    --equalsshadow:#873901;
+    
+}
+
+[data-theme="third"]{
+    --background:#17062A;
+    --contrasttext:#FFFFFF;
+    --solutionbackground:#1E0936;
+    --buttonsbackground:  #1E0936;
+    --button: #331C4D;
+    --specialbutton:#56077C;
+    --equalsbutton:#00DED0;
+    --buttontext:#FFE53D;
+    --titletext:#FFE53D;
+    --boxshadow:#881C9E;
+    --equaltext:#1A2327;
+    --resetshadow:#BE15F4;
+    --equalsshadow:#6CF9F1;
+}
+
+
 body{
     padding: 0;
     margin: 0;
-    background-color: #3A4663;
+    background-color:var(--background);
 }
 
 .header{
@@ -21,8 +71,7 @@ body{
 
     text-align: center;
     letter-spacing: -0.533333px;
-
-    color: #FFFFFF;
+    color: var(--titletext);
     text-align: left;
 }
 
@@ -38,7 +87,7 @@ body{
 }
 
 .solution {
-    background-color: #181F33;
+    background-color: var(--solutionbackground);
     border-radius: 10px;
 }
 
@@ -51,41 +100,43 @@ body{
     /* identical to box height */
     text-align: right;
     letter-spacing: -0.8px;
-    color: #FFFFFF;
+    color:  var(--titletext);
     margin-right: 30px;
 }
 
 
 .buttons{
-    background-color: #242D44;
+    background-color: var(--buttonsbackground);
     border-radius: 10px;
     display: grid;
     grid-template-columns: repeat(4,100px);
     grid-template-rows: repeat(4,64px) 64px;  
     justify-content: space-evenly;
     align-content: space-evenly;
+   
 }
 
 .buttons button{
-    background: #EAE3DC;
-    box-shadow: inset 0px -4px 0px #B3A497;
+    background: var(--button);
+    box-shadow: inset 0px -4px 0px var(--boxshadow);
+    border: none;
     border-radius: 10px;
-   
+    outline: none;
     font-family: Spartan;
     font-style: normal;
     font-weight: bold;
     font-size: 32px;
     line-height: 36px;  
     letter-spacing: -0.533333px;
-    color: #434A59;
+    color: var(--buttontext)
   
 }
 .buttons .del{
-    background: #647198;
-    box-shadow: inset 0px -4px 0px #414E73;
+    background: var(--specialbutton);
+    box-shadow: inset 0px -4px 0px var(--resetshadow);
     border-radius: 10px;
     
-    color: #FFFFFF;
+    color: var(--contrasttext);
     font-family: Spartan;
     font-style: normal;
     font-weight: bold;
@@ -98,8 +149,8 @@ body{
 
 
 .buttons .reset{
-    background: #647198;
-    box-shadow: inset 0px -4px 0px #414E73;
+    background: var(--specialbutton);
+    box-shadow: inset 0px -4px 0px var(--resetshadow);
     border-radius: 10px;
 
     font-family: Spartan;
@@ -110,13 +161,13 @@ body{
     text-align: center;
     letter-spacing: -0.333333px;
     width: 227px;
-    color: #FFFFFF;
+    color: var(--contrasttext)
 }
 
 
 .buttons .equals{
-    background: #D03F2F;
-    box-shadow: inset 0px -4px 0px #93261A;
+    background: var(--equalsbutton);
+    box-shadow: inset 0px -4px 0px var(--equalsshadow);
     border-radius: 10px;
     
     font-family: Spartan;
@@ -128,7 +179,7 @@ body{
     letter-spacing: -0.333333px;
     width: 227px;
     margin-left: 130px;
-    color: #FFFFFF;
+    color: var(--equaltext)
 }
 
 .slidecontainer {
@@ -145,7 +196,7 @@ body{
     appearance: none;
     width: 100%; /* Full-width */
     height: 25px; /* Specified height */
-    background: #242D44; /* Grey background */
+    background: var(--buttonsbackground); /* Grey background */
     outline: none; /* Remove outline */
     -webkit-transition: .2s; /* 0.2 seconds transition on hover */
     transition: opacity .2s;
@@ -161,7 +212,7 @@ body{
     appearance: none;
     width: 16px; /* Set a specific slider handle width */
     height: 16px; /* Slider handle height */
-    background: #D03F2F; /* Green background */
+    background: var(--equalsbutton); /* Green background */
     cursor: pointer; /* Cursor on hover */
     border-radius: 50%;
 
